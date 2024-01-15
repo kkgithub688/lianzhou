@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>莲舟</title>
+    <!-- 导航栏 -->
+    <style>
+        .navbar {
+            background-color: #fff;
+            /* 设置背景颜色 */
+            overflow: hidden;
+            /* 清除浮动元素影响布局 */
+        }
+
+        .navbar a {
+            float: left;
+            /* 左浮动，将所有链接水平排列 */
+            display: block;
+            /* 显示为块状元素 */
+            color: black;
+            /* 文字颜色为黑色 */
+            text-align: center;
+            /* 居中对齐 */
+            padding: 27px 16px;
+            /* 内边距 */
+            text-decoration: none;
+            /* 去除默认样式下划线 */
+        }
+
+        .navbar a:hover {
+            background-color: #ddd;
+            /* 鼠标悬停时改变背景颜色 */
+            color: black;
+            /* 鼠标悬停时改变文字颜色 */
+        }
+    </style>
+    <!-- 热点项目图片滑动 -->
+    <style>
+        .image-slider {
+            position: relative;
+            height: 340px;
+            width: 600px;
+            /* 根据需要调整 */
+            overflow: hidden;
+            float: left;
+        }
+
+        .image-slider img {
+            position: absolute;
+            width: 600px;
+            margin-left: 40px;
+            /* 根据需要调整 */
+            transition: opacity 1s;
+        }
+
+        .image-slider-container {
+            position: relative;
+            top: 200px;
+            height: 440px;
+            width: 700px;
+        }
+    </style>
+    <!-- 图片左右滑动按钮 -->
+    <style>
+        .sliderleft {
+            background-image: url(./img/left.jpeg);
+            height: 50px;
+            width: 30px;
+            background-size: 100%;
+            border: none;
+            opacity: 0.5;
+            cursor: pointer;
+            position: relative;
+            top: 130px;
+            float: left;
+        }
+
+        .sliderright {
+            background-image: url(./img/right.jpeg);
+            height: 50px;
+            width: 30px;
+            background-size: 100%;
+            border: none;
+            opacity: 0.5;
+            cursor: pointer;
+            position: relative;
+            top: 130px;
+            float: right;
+        }
+    </style>
+    <!-- 文字滑动 -->
+    <style>
+        .text-slider {
+            height: 50px;
+            position: relative;
+            left: 250px;
+            width: 200px;
+            text-align: center;
+        }
+
+        .text-slider p {
+            color: #FFFFFF;
+            height: 50px;
+            position: relative;
+            top: 20px;
+            font-size: large;
+        }
+        .text-slider a{
+            text-decoration: none;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/jquery-ui.structure.min.css" />
+
+    <link rel="stylesheet" href="one/css/mainMobile.css" />
+    <link rel="stylesheet" href="one/css/mainDialogMobile.css" />
+    <link rel="stylesheet" type="text/css" href="one/css/dialog.css">
+</head>
+
+<body>
+    <div id="header" style="background-color: #FFFFFF; position: absolute; top: 0%; left: 0%; right: 0%;height: 75px;">
+        <div style="float: left; position: relative; left: 100px;top: 12px;height: 60px;">
+            <a href="home.html"><img src="./img/logo.jpg" height="60px"></a>
+        </div>
+        <div style="position: relative; left: 150px;" class="navbar">
+            <a href="#">项目列表</a>
+            <a href="#">流程公示</a>
+            <a href="#">区块查询</a>
+            <a href="#">结果查询</a>
+            <a href="#">募捐申请</a>
+            <a href="loginnew.html" style="position: relative;left: 500px;">登录</a>
+            <a href="register.html" style="position: relative;left: 500px;">注册</a>
+        </div>
+    </div>
+    <div id="boxmap">
+
+        <div id="tital" style="position: relative;top: 50px;left: 0px;">区块链实时图
+            <div class="borderbo"></div>
+        </div>
+        <div id="map" style="height:600px;width:700px;float: left;margin-right: 50px;position: relative;top: 50px;">
+
+        </div>
+        <div class="myscroll" style="position: relative;top: 50px;">
+
+            <ul id="blockList">
+
+            </ul>
+        </div>
+        <!--<div><a href="table.html"><button id="more">查看更多</button></a></div>	-->
+        <div id="aylogo" style="position: absolute;top: 400px;height: 50px;"><img src="aiyoulogo.png"></div>
+        <div id="tital" style="position: absolute;margin-left: 250px;margin-top: 120px;">&nbsp;&nbsp;&nbsp;&nbsp;热点项目
+            <div class="borderbo"></div>
+        </div>
+        <div class="myscroll" style="width: 400px;float: right;margin: 0%;position: relative;top: 200px;">
+            <h1 style="text-align: center;margin: 10px;">公告栏<br></h1>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告1<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告2<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告3<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告4<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告5<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告6<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告7<br></a>
+            <a style="position: relative;left: 50px;font-size: large;" href="#">>>公告8<br></a>
+        </div>
+        <div class="image-slider-container">
+            <input id="button" type="button" onclick="show()" class="sliderleft">
+            <input id="buttonright" type="button" onclick="showNextImage()" class="sliderright">
+            <div class="image-slider">
+                <a href="donate1.html"><img src="./img/ggjs.jpg" alt="1"></a>
+                <a href="donate2.html"><img src="./img/fpzp1.jpg" alt="2" style="opacity: 0;"></a>
+                <a href="donate3.html"><img src="./img/hj.png" alt="3" style="opacity: 0;"></a>
+            </div>
+            <div class="text-slider">
+                <a href="donate1.html"><p>帮助留守儿童</p></a>
+                <a href="donate2.html"><p style="opacity: 0;">乡村振兴计划</p></a>
+                <a href="donate3.html"><p style="opacity: 0;">保护野生象群</p></a>
+            </div>
+        </div>
+
+        <script>
+            const images = document.querySelectorAll('.image-slider img');
+            const totalImages = images.length;
+            const imageSlider = document.querySelector('.image-slider');
+            let currentIndex = 0;
+            const texts = document.querySelectorAll('.text-slider p');
+            const totalTexts = texts.length;
+            const textSlider = document.querySelector('.text-slider');
+
+            function showNextImage() {
+                images[currentIndex].style.opacity = 0; // 隐藏当前图片
+                texts[currentIndex].style.opacity = 0;  
+                currentIndex = (currentIndex + 1) % totalImages; // 计算下一张图片的索引  
+                images[currentIndex].style.opacity = 1; // 显示下一张图片
+                texts[currentIndex].style.opacity = 1;  
+            }
+            function show() {
+                images[currentIndex].style.opacity = 0; // 隐藏当前图片  
+                texts[currentIndex].style.opacity = 0;  
+                currentIndex = (currentIndex - 1) % totalImages; // 计算下一张图片的索引  
+                if (currentIndex < 0) currentIndex = currentIndex + totalImages;
+                images[currentIndex].style.opacity = 1; // 显示下一张图片  
+                texts[currentIndex].style.opacity = 1; 
+            }
+            // setInterval(showNextImage, 3000);
+        </script>
+        <script type="text/javascript" src="js/jquery-ui.min.js"></script>
+        <script src="js/index.js"></script>
+        <script type="text/javascript" src="js/echarts.min.js"></script>
+        <script type="text/javascript" src="js/china.js"></script>
+        <script type="text/javascript" src="js/jquery.timer.js"></script>
+        <script type="text/javascript" src="js/blockMap.js"></script>
+        <script src="one/js/common.js"></script>
+        <script src="one/js/login.js"></script>
+</body>
+
+</html>
