@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		    <meta charset="UTF-8">
+		        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+			    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+			        <title>Login - 莲舟</title>
+				    <style>
+        body {
+		            font-family: 'Arial', sans-serif;
+			                background-color: #f8f9fa;
+					            margin: 0;
+						                padding: 0;
+								            box-sizing: border-box;
+									                text-align: center;
+											        }
+
+	        header {
+			            background-color: #3498db;
+				                color: #fff;
+						            padding: 20px 0;
+							            }
+
+		        h1 {
+				            font-size: 2.5em;
+					                margin-bottom: 20px;
+							        }
+
+			        form {
+					            max-width: 400px;
+						                margin: 0 auto;
+								            background-color: #fff;
+									                padding: 20px;
+											            border-radius: 5px;
+												                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+														        }
+
+				        label {
+						            display: block;
+							                text-align: left;
+									            margin: 15px 0 5px;
+										                font-weight: bold;
+												        }
+
+					        input {
+							            width: 100%;
+								                padding: 10px;
+										            margin-bottom: 15px;
+											                border: 1px solid #ccc;
+													            border-radius: 4px;
+														                box-sizing: border-box;
+																        }
+
+						        input[type="submit"] {
+								            background-color: #3498db;
+									                color: #fff;
+											            cursor: pointer;
+												            }
+
+							        input[type="submit"]:hover {
+									            background-color: #2980b9;
+										            }
+
+								        p {
+										            font-size: 1.2em;
+											                color: #555;
+													            margin-top: 20px;
+														            }
+
+									        a {
+											            text-decoration: none;
+												                color: #3498db;
+														            font-weight: bold;
+															            }
+
+										        a:hover {
+												            text-decoration: underline;
+													            }
+											    </style>
+	</head>
+
+	<body>
+		    <header>
+			            <h1>Login - <a href="home.html" style="color: #fff; text-decoration: none;">莲舟</a></h1>
+				        </header>
+					    <main>
+						            <form method="POST" action="{{ url_for('login') }}">
+								                <label for="username">Username:</label>
+										            <input type="text" name="username" required><br>
+
+											                <label for="password">Password:</label>
+													            <input type="password" name="password" required><br>
+
+														                <input type="submit" value="Login">
+																        </form>
+																	        <p>Don't have an account? <a href="register.html">Register</a></p>
+																		    </main>
+	</body>
+
+</html>
+
+
