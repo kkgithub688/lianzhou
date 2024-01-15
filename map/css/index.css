@@ -1,0 +1,137 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+#nav {
+	height: 68px;
+	width: 100%;
+	background-color: white;
+}
+
+body {
+	background-color: #061228;
+	min-width: 1200px;overflow-y:scroll;
+	
+}
+
+#nav img {
+	float: left;
+}
+
+#navlogo li {
+	float: right;
+	list-style-type: none;
+	border-right: 2px solid #e1e1e1;
+}
+
+#li {
+	position: relative;
+	cursor: pointer;
+}
+
+.qc {
+	position: absolute;
+	top: 60px;
+	left: -30px;
+	display: none;
+}
+#boxmap{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	padding-bottom: 10px;
+}
+
+#lit {
+	position: relative;
+	cursor: pointer;
+}
+
+#tital {
+	color: #b3b7c0;
+	font-size: 30px;
+	margin-left: 380px;
+	padding-top: 50px;
+	overflow: hidden;
+}
+
+#tital .borderbo {
+	width: 100px;
+	height: 1px;
+	color: #b3b7c0;
+	border-bottom: 3px solid #b3b7c0;
+	margin-left: 40px;
+	margin-top: 10px;
+}
+.myscroll {width: 550;height: 465px;margin: 68px 0 0 300px;border: 1px solid #2e4863;line-height: 26px;font-size: 12px;overflow: hidden;background-color: #1a2539;color: #d3c296;}
+.myscroll ul{
+	margin: 0 auto;
+}
+.myscroll li { height: 30px; margin-left: 45px; border-bottom: 1px #2d4a6a dashed;list-style-type: none;
+margin-right: 45px;text-align:left;}
+.myscroll a { color: #d3c296; text-decoration: none;padding-left: 10px;padding-right: 10px;font-size: 14px;}
+.myscroll li:hover { color: #fefeff;background-color: #86846f}
+.myscroll li .left{
+	display:inline; float:left;
+	margin-left: 10px;
+}
+.right{
+	 display:inline; float:right;
+	 margin-right: 10px;
+}
+#bottom{
+	width: 100%;
+	margin-top: 10%;
+}
+#wylogo{
+	
+	text-align: center;
+
+}
+#more{
+	border-radius: 50px;
+	width: 80px;
+	background-color: #892937;
+	opacity:0.7;
+	border: none;
+	height: 25px;
+	margin-left: 940px;
+	margin-top: 20px;
+}
+#more:hover{
+	opacity:1;
+}
+#more a{
+	color: white;
+	text-decoration: none;
+}
+#aylogo{
+	position: absolute;
+	width: 20px;
+	top: 346px;
+	bottom: 0px;
+	left: 447px;
+	right: 0px;
+	z-index: 999;
+}
+#pc-login-btn {
+	/* display: block; */
+    height: 68px;
+    line-height: 68px;
+    border-radius: .5rem;
+    width: 67px;
+    /* margin: 1rem 0; */
+    background: #C81233;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
+	cursor: pointer;
+	/* display: flex; */
+	/* align-items: center; */
+	/* justify-content: center; */
+}
+
+.img-icon{
+	width: 33px;
+}
